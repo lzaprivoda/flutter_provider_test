@@ -1,4 +1,5 @@
 import 'package:countries_test/data/repository/countries_repository.dart';
+import 'package:countries_test/view/country_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:countries_test/data/model/countries.dart';
@@ -53,7 +54,7 @@ class _Body extends StatelessWidget {
 
   Widget _contents(BuildContext context) {
     final List<Country> countries =
-    context.select((HomeScreenViewModel model) => model.countries);
+        context.select((HomeScreenViewModel model) => model.countries);
     return ListView.separated(
       itemBuilder: (BuildContext context, int index) {
         return _listItem(context, countries[index]);
@@ -72,6 +73,13 @@ class _Body extends StatelessWidget {
         style: Theme.of(context).textTheme.bodyText1,
       ),
       leading: Text(country.emoji ?? ""),
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CountryScreen(country),
+            ));
+      },
     );
   }
 }
