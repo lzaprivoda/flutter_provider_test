@@ -6,7 +6,7 @@ testFlutterGraphProject
 
 This project is a starting point for a Flutter application.
 
-Execute the following command in order to add auto-generated classes:
+Execute the following command in order to add auto-generated stuff and dependencies:
 ```
 $ flutter pub get
 $ flutter pub run build_runner build lib
