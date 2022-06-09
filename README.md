@@ -6,10 +6,12 @@ testFlutterGraphProject
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Execute the following command in order to add auto-generated classes:
+```
+$ flutter pub get
+$ flutter pub run build_runner build lib
+$ flutter pub run build_runner build --delete-conflicting-outputs   # or this if the previous line doesn't work
+```
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
